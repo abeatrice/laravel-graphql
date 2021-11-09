@@ -9,6 +9,12 @@ type Query {
     user(id: ID @eq): User @find
     posts: [Post!]! @all
     post(id: Int! @eq): Post @find
+    PubPlacements: [PubPlacement!]! @all
+}
+
+type PubPlacement {
+    id: ID!
+    name: String!
 }
 
 type User {
